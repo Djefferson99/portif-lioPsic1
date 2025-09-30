@@ -11,19 +11,11 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-    @font-face {
-        font-family: 'Simplicity';
-        src: url('../fonts/Simplicity.woff2') format('woff2'),
-             url('../fonts/Simplicity.woff') format('woff');
-        /* Add other formats like TTF or OTF if needed */
-        font-weight: normal; /* Adjust if the font has different weights */
-        font-style: normal; /* Adjust if the font has different styles */
-    }
-
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 :root {
   --default-font: "Poppins",  sans-serif; 
-  --heading-font: "Simplicity",  sans-serif;
+  --heading-font: "Poppins",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
