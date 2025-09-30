@@ -56,6 +56,94 @@ color: #fff;
 }
 
   </style>
+  <style>
+  .about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: -100px;
+    padding: 40px;
+
+    flex-direction: row-reverse; /* imagem à direita no desktop */
+  }
+
+  /* Responsivo para telas menores */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;   /* imagem em cima, texto embaixo */
+      padding: 20px;
+      gap: 20px;
+      max-width: 100vw;
+      margin-top: -20px;
+    }
+    .about-content img {
+      max-width: 100vw;
+      margin-bottom: 20px;
+      height: auto;
+    }
+  }
+
+  .approach-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    margin-top: -50px;
+  }
+
+  /* Responsivo para telas menores */
+  @media (max-width: 768px) {
+    .approach-content {
+      grid-template-columns: 1fr;  /* de duas colunas vira uma */
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+      margin-top: -10px;
+    }
+    .approach-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; /* centraliza a imagem */
+    }
+  }
+    .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    margin-top: -50px;
+  }
+
+  /* Responsivo para telas menores */
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr; /* 1 coluna no mobile */
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+      margin-top: -10px;
+    }
+    .contact-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; /* centraliza a imagem */
+    }
+  }
+</style>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -111,19 +199,38 @@ color: #fff;
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+<section id="about" class="about section" data-aos="fade-up">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre mim:</h2>
-        <p> Sou psicóloga clínica e especialista em relacionamentos, pós-graduanda em Psicologia Clínica e Terapia Cognitivo-Comportamental. Minha missão é ajudar mulheres a fortalecerem a autoestima, superarem desafios emocionais e construírem relações mais saudáveis e equilibradas.</p>
-        <p style="margin-top: 10px;">Acredito no acolhimento, no autoconhecimento e na transformação pessoal. Aqui, você encontrará um espaço seguro para refletir, crescer e se reconectar com sua própria força, aprendendo a se valorizar e viver relações mais leves e conscientes.</p>
-        <div style="margin-top: 20px;">
-        <a style="margin-top: 30px;" class="whatsapp-btn" href="https://wa.me/5511998246477?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer">
-          💬 Fale comigo no WhatsApp
-        </a>
-      </div><!-- End Section Title -->
-    </section>
+  <!-- Section Title (mantido) -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Sobre mim:</h2>
+  </div>
+
+  <div class="about-content">
+
+    <!-- Imagem -->
+    <div style="display:flex; justify-content:center;">
+      <img src="/assets/img/sobre mim.jpg" alt="Sobre mim" style=" max-width:80%; object-fit: cover;">
+
+    </div>
+    <!-- Texto -->
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center;">
+      <p style="font-size:1.1rem; color:#374151; line-height:1.6; font-weight:500;">
+        Sou psicóloga clínica e especialista em relacionamentos, pós-graduanda em Psicologia Clínica e Terapia Cognitivo-Comportamental. 
+        Minha missão é ajudar mulheres a fortalecerem a autoestima, superarem desafios emocionais e construírem relações mais saudáveis e equilibradas.
+      </p>
+      <p style="font-size:1.05rem; color:#374151; line-height:1.6; font-weight:500;">
+        Acredito no acolhimento, no autoconhecimento e na transformação pessoal. Aqui, você encontrará um espaço seguro para refletir, crescer e se reconectar com sua própria força, aprendendo a se valorizar e viver relações mais leves e conscientes.
+      </p>
+
+      <!-- Botão -->
+        <div>
+           <a class="whatsapp-btn" href="https://wa.me/5599999999999?" target="_blank">💬 Fale comigo no WhatsApp</a>
+        </div>
+    </div>
+  </div>
+</section>
+
 <div class="container" data-aos="fade-up" data-aos-delay="100">
   <div class="row gy-4 align-items-center">
     
@@ -171,18 +278,14 @@ color: #fff;
 </div>
 
 </div>
-
-
-
-    </section><!-- /About Section -->
    
    
     <!-- Resume Section -->
    
 
       <!-- Section Title -->
-       <section id="resume" class="about section" style="margin-bottom: -100px;">
-        <div class="container section-title" data-aos="fade-up">
+       <section id="resume" class="about section" style="margin-bottom: -100px;" data-aos="fade-up">
+        <div class="container section-title">
         <h2 >Resumo:</h2>
         <h3>Como especialista em relacionamentos, ofereço apoio a mulheres que desejam:</h3>
         <ul>
@@ -203,12 +306,32 @@ color: #fff;
     <section id="services" class="services section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-      <section>
-      <h2 style=" margin-top: -00px;">Minha Abordagem</h2>
-        <h5>Terapia Cognitivo-Comportamental (TCC) </h5>
-        <p style="margin-bottom: 30px;">A Terapia Cognitivo-Comportamental (TCC) é uma abordagem prática e comprovada, que ajuda a identificar e transformar pensamentos e padrões que geram sofrimento. Muitas vezes, repetimos comportamentos ou acreditamos em ideias que nos limitam, sem perceber.</p>
-      
+     <section id="approach" class="approach section" style="padding: 60px 20px; background: #f9fafb;">
+
+  <!-- Section Title (mantido) -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 style="margin-top:0;">Minha Abordagem</h2>
+  </div>
+
+  <div class="approach-content">
+
+    <!-- Imagem -->
+    <div style="display:flex; justify-content:center;">
+      <img src="/assets/img/Abordagem.jpg" alt="Minha Abordagem" style="  width: 400px; height: 400px; object-fit: cover;"">
+    </div>
+
+    <!-- Texto -->
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center;">
+      <h5 style="font-size:1.3rem; font-weight:600; color:#111827; margin:0;">
+        Terapia Cognitivo-Comportamental (TCC)
+      </h5>
+      <p style="font-size:1.1rem; color:#374151; line-height:1.6;">
+        A Terapia Cognitivo-Comportamental (TCC) é uma abordagem prática e comprovada, que ajuda a identificar e transformar pensamentos e padrões que geram sofrimento. Muitas vezes, repetimos comportamentos ou acreditamos em ideias que nos limitam, sem perceber.
+      </p>
+    </div>
+  </div>
+</section>
+
       </section><!-- /Services Section -->
 
     <!-- Testimonials Section -->
@@ -262,6 +385,7 @@ color: #fff;
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
                   <span>Ressignificar crenças ligadas a relacionamentos amorosos e familiares permite curar feridas do passado, estabelecer vínculos mais saudáveis e cultivar conexões baseadas em respeito, confiança e afeto verdadeiro.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
@@ -295,33 +419,53 @@ color: #fff;
     </section><!-- /Testimonials Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+ <section id="contact" class="contact section" style="padding: 60px 20px; background: #f9fafb;">
+<div class="container section-title" data-aos="fade-up">
+    <h2>Contato</h2>
+  </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contato</h2>
-        <p>"Transforme a dor em força, resgate sua autoestima e viva relações mais saudáveis e conscientes, cultivando amor-próprio, respeito mútuo e equilíbrio emocional."</p>
-      </div><!-- End Section Title -->
-<div class="social-links text-center" style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px;">
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/psijandaiapaulussi?igsh=YzhvMzd3NmNmaGt2" target="_blank" style="display:flex; align-items:center; gap:6px; padding:10px 14px; background:#E1306C; color:#fff; border-radius:6px; text-decoration:none; font-weight:500;">
-    <i class="bi bi-instagram"></i> Instagram
-  </a>
 
-  <!-- WhatsApp -->
-  <a class="whatsapp-btn" href="https://wa.me/5511998246477?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:6px; padding:10px 14px; background:#25D366; color:#fff; border-radius:6px; text-decoration:none; font-weight:500;">
-    <i class="bi bi-whatsapp"></i> WhatsApp
-  </a>
+  <div class="contact-content">
+    
+    <!-- Imagem -->
+    <div style="display:flex; justify-content:center;">
+      <img src="/assets/img/Contato.jpg" alt="Contato" style="width:100%; max-width:350px; object-fit: cover;">
+    </div>
 
-  <!-- E-mail -->
-<a href="https://mail.google.com/mail/?view=cm&to=jandaia.psicologa@gmail.com" 
-   target="_blank" 
-   style="display:flex; align-items:center; gap:6px; padding:10px 14px; background:#EA4335; color:#fff; border-radius:6px; text-decoration:none; font-weight:500;">
-  <i class="bi bi-envelope"></i> E-mail
-</a>
+    <!-- Texto + Links -->
+    <div style="display:flex; flex-direction:column; gap:24px; justify-content:center; text-align:center;">
+      <p style="font-size:1.1rem; color:#374151; line-height:1.6; font-weight:500;">
+        "Transforme a dor em força, resgate sua autoestima e viva relações mais saudáveis e conscientes, cultivando amor-próprio, respeito mútuo e equilíbrio emocional."
+      </p>
 
-</div>
-    </section><!-- /Contact Section -->
+      <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/psijandaiapaulussi?igsh=YzhvMzd3NmNmaGt2" target="_blank" 
+          style="display:flex; align-items:center; gap:8px; padding:12px 18px; background:#E1306C; color:#fff; 
+                 border-radius:10px; text-decoration:none; font-weight:600; transition:all 0.3s ease;">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="whatsapp-btn" href="https://wa.me/5511998246477?text=Ol%C3%A1%21%20Tudo%20bem%3F%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." 
+           target="_blank" rel="noopener noreferrer"
+          style="display:flex; align-items:center; gap:8px; padding:12px 18px; background:#25D366; color:#fff; 
+                 border-radius:10px; text-decoration:none; font-weight:600; transition:all 0.3s ease;">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+
+        <!-- E-mail -->
+        <a href="https://mail.google.com/mail/?view=cm&to=jandaia.psicologa@gmail.com" target="_blank" 
+          style="display:flex; align-items:center; gap:8px; padding:12px 18px; background:#EA4335; color:#fff; 
+                 border-radius:10px; text-decoration:none; font-weight:600; transition:all 0.3s ease;">
+          <i class="bi bi-envelope"></i> E-mail
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Contact Section -->
 
   </main>
 
